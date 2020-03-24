@@ -7,7 +7,7 @@ import Backdrop from '../Backdrop/Backdrop';
 class Modal extends Component {
     // Check to make sure that this component will ONLY rerender when 'show' changes
     shouldComponentUpdate(nextProps, nextState) {
-        if (nextProps.show !== this.props.show) {
+        if (nextProps.show !== this.props.show || nextProps.children !== this.props.children) {
             return true;
         }
     }
